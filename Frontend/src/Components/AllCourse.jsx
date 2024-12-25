@@ -12,7 +12,7 @@ const AllCourse = () => {
 
   const getCourse = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/course/get-course', {
+      const response = await axios.get('https://institute-mangement-system-backedd.onrender.com/course/get-course', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
