@@ -14,7 +14,7 @@ const Home = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/course/total-count', {
+      const response = await axios.get('https://institute-mangement-system-backedd.onrender.com/course/total-count', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
