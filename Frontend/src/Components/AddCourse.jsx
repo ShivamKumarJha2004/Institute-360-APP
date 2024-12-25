@@ -85,7 +85,7 @@ const AddCourse = () => {
       {
         
         response = await axios.put(
-          `https://institute-mangement-system-backedd.onrender.com/update-course/${location.state.course._id}`,
+          `https://institute-mangement-system-backedd.onrender.com/course/update-course/${location.state.course._id}`,
           formData,
           {
             headers: {
