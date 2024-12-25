@@ -161,10 +161,10 @@ const navigate=useNavigate();
             <p className="text-center text-gray-500 mt-6">
               Have an account?{' '}
             <Link
-                to="/signup"
+                to="/"
                 className="text-blue-500 hover:underline"
               >
-                Sign up
+                login
               </Link>           
             </p>
             <button
