@@ -85,7 +85,7 @@ const AddCourse = () => {
       {
         
         response = await axios.put(
-          `http://localhost:4001/course/update-course/${location.state.course._id}`,
+          `https://institute-mangement-system-backedd.onrender.com/update-course/${location.state.course._id}`,
           formData,
           {
             headers: {
@@ -114,7 +114,7 @@ const AddCourse = () => {
       else {
         // Add course
         response = await axios.post(
-          `http://localhost:4001/course/add-course/`,
+          `https://institute-mangement-system-backedd.onrender.com/course/add-course/`,
           formData,
           {
             headers: {
