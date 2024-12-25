@@ -62,10 +62,10 @@ const navigate=useNavigate();
       if (response.data.success) {
         setCourseName(response.data.courses); // Ensure this structure matches your API response
       } else {
-        toast.error(response.data.message");
+        toast.error(response.data.message);
       }
     } catch (error) {
-      toast.error(error.message ");
+      toast.error(error.message);
     }
   };
 
