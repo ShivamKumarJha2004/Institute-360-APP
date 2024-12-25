@@ -72,7 +72,7 @@ const navigate=useNavigate();
     formData.append('image', image); // Use the file directly
 
     try {
-      const response = await axios.post('http://localhost:4001/api/signup', formData);
+      const response = await axios.post('https://institute-mangement-system-backedd.onrender.com/api/signup', formData);
       setLoading(false);
       if (response.data.success) {
 
