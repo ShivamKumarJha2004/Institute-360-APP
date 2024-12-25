@@ -50,7 +50,7 @@ console.log(location.state);
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:4001/course/get-course", {
+      const response = await axios.get("https://institute-mangement-system-backedd.onrender.com/course/get-course", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -95,7 +95,7 @@ console.log(location.state);
       {
         
         response = await axios.put(
-          `http://localhost:4001/student/update-student/${location.state.studentDetails._id}`,
+          `https://institute-mangement-system-backedd.onrender.com/student/update-student/${location.state.studentDetails._id}`,
           formData,
           {
             headers: {
@@ -126,7 +126,7 @@ console.log(location.state);
       else
       {
       const response = await axios.post(
-        "http://localhost:4001/student/add-student",
+        "https://institute-mangement-system-backedd.onrender.com/student/add-student",
         formData,
         {
           headers: {
