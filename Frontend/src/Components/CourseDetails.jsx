@@ -26,7 +26,7 @@ const handleDeleteCourse = async (courseId) => {
     
     try {
       // Sending DELETE request to the server
-      const response = await axios.delete(`http://localhost:4001/course/delete-course/${courseId}`, {
+      const response = await axios.delete(`https://institute-mangement-system-backedd.onrender.com/course/delete-course/${courseId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -51,7 +51,7 @@ const handleDeleteCourse = async (courseId) => {
 
   const getCourseDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:4001/course/get-course/${params.id}`, {
+      const response = await axios.get(`https://institute-mangement-system-backedd.onrender.com/course/get-course/${params.id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -69,7 +69,7 @@ const handleDeleteCourse = async (courseId) => {
 
   const getEnrolledStudents = async () => {
     try {
-      const response = await axios.get(`http://localhost:4001/student/get-coursestudent/${params.id}`, {
+      const response = await axios.get(`https://institute-mangement-system-backedd.onrender.com/student/get-coursestudent/${params.id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
