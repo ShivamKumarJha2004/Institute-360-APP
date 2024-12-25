@@ -14,7 +14,7 @@ const AllStudent = () => {
 
   const getStudents = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/student/get-student', {
+      const response = await axios.get('https://institute-mangement-system-backedd.onrender.com/student/get-student', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
