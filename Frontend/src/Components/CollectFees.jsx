@@ -21,7 +21,7 @@ const navigate=useNavigate();
     console.log(data);
     try {
       const response = await axios.post(
-        "http://localhost:4001/payment/add-payment",data,{
+        "https://institute-mangement-system-backedd.onrender.com/payment/add-payment",data,{
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -52,7 +52,7 @@ const navigate=useNavigate();
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:4001/course/get-course", {
+      const response = await axios.get("https://institute-mangement-system-backedd.onrender.com/course/get-course", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -62,10 +62,10 @@ const navigate=useNavigate();
       if (response.data.success) {
         setCourseName(response.data.courses); // Ensure this structure matches your API response
       } else {
-        toast.error(response.data.message || "Failed to fetch courses.");
+        toast.error(response.data.message");
       }
     } catch (error) {
-      toast.error(error.message || "An error occurred while fetching courses.");
+      toast.error(error.message ");
     }
   };
 
