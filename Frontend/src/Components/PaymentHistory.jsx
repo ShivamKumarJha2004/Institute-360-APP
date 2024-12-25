@@ -18,7 +18,7 @@ const PaymentHistory = () => {
   const getPaymentDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4001/payment//get-payment/`,
+        `https://institute-mangement-system-backedd.onrender.com/payment//get-payment/`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
