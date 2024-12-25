@@ -32,7 +32,7 @@ const StudentDetails = () => {
   const getCourseDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4001/student/student-details/${params.id}`,
+        `https://institute-mangement-system-backedd.onrender.com/student/student-details/${params.id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -60,7 +60,7 @@ const StudentDetails = () => {
       
     try {
       const response = await axios.delete(
-        `http://localhost:4001/student/delete-student/${id}`,
+        `https://institute-mangement-system-backedd.onrender.com/student/delete-student/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
