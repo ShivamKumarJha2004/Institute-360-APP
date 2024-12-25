@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import loginImage from "../assets/loginImage.webp";
 import logo from "../assets/logo.png";
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useNavigate,Link } from 'react-router-dom';
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -32,24 +32,30 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post(
-        'https://institute-mangement-system-backedd.onrender.com/api/login',
-        data
-      );
+      const response = await axios.post('https://institute-mangement-system-backedd.onrender.com/api/login', data);
       console.log(response);
-
+      
       setLoading(false);
       if (response.data.success) {
+        console.log(response);
         toast.success('Login successful!');
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('image', response.data.user.imageUrl);
-        localStorage.setItem('name', response.data.user.institute_name);
+        localStorage.setItem('token',response.data.token)
+        localStorage.setItem('image',response.data.user.imageUrl);
+        localStorage.setItem('name',response.data.user.institute_name
+        )
         navigate('/dashboard');
+        
+        
+        
+        
+        
       } else {
+        console.log("err");
+        
         toast.error(response.data.message);
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || 'An error occurred.');
+      toast.error(error.response?.data?.message);
       setLoading(false);
     }
   };
@@ -100,12 +106,12 @@ const Login = () => {
               />
             </div>
             <div className="flex justify-end mt-2">
-              <Link
-                to="/forgot-password"
+              <a
+                href="/forgot-password"
                 className="text-sm text-blue-500 hover:underline"
               >
                 Forgot Password?
-              </Link>
+              </a>
             </div>
             <button
               type="submit"
@@ -122,12 +128,13 @@ const Login = () => {
             </button>
             <p className="text-center text-gray-500 mt-6">
               Don't have an account?{' '}
-              <Link
-                to="/signup"
-                className="text-blue-500 hover:underline"
-              >
+              <Link to='/signup' className="text-blue-500 hover:underline">               
+               
+               
+             
                 Sign up
-              </Link>
+                </Link>
+
             </p>
           </div>
         </div>
