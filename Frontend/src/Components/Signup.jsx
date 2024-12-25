@@ -3,7 +3,7 @@ import signupImage from "../assets/signUpform.webp";
 import logo from "../assets/logo.png";
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -160,12 +160,12 @@ const navigate=useNavigate();
             </div>
             <p className="text-center text-gray-500 mt-6">
               Have an account?{' '}
-              <a
-                href="/"
+            <Link
+                to="/signup"
                 className="text-blue-500 hover:underline"
               >
-                login
-              </a>
+                Sign up
+              </Link>           
             </p>
             <button
               className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-md transition duration-300"
